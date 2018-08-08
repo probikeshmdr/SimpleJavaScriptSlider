@@ -5,7 +5,8 @@
     <title>JavaScript Image Slides</title>
 </head>
 <body>
-    <img id="img_slider" name="img_slider" width="250" height="200">
+    <!-- Simple javascript slider : Bikesh Manandhar-->
+    <img id="img_slider" width="250" height="200">
     <script>
         let i = 0;
         let images = [];
@@ -17,8 +18,7 @@
         }
 
         //Changing images
-        function changeImg(){
-            // document.getElementById('img_slider').src = images[i];
+        function changeImg(){            
             document.getElementById('img_slider').src = images[i];
             if(i < images.length -1){
                 i++;
