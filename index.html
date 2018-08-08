@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />    
+    <title>JavaScript Image Slides</title>
+</head>
+<body>
+    <img id="img_slider" name="img_slider" width="250" height="200">
+    <script>
+        let i = 0;
+        let images = [];
+        let imgDuration = 2000;
+
+        //Adding images into ArrayList
+        for(let j=0;j<5;j++){
+            images[j] ='img'+(j+1)+'.jpg';             
+        }
+
+        //Changing images
+        function changeImg(){
+            // document.getElementById('img_slider').src = images[i];
+            document.getElementById('img_slider').src = images[i];
+            if(i < images.length -1){
+                i++;
+            } else{
+                i=0;
+            }       
+            setTimeout("changeImg()",imgDuration);    
+        }
+        window.onload = changeImg;
+    </script>
+</body>
+</html>
